@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register</title>
+</head>
+<body>
+<h1>Register</h1>
+<!-- temp get, todo: post -->
+<form method="get">
+  <div>
+    <label for="full-name">Full name</label>
+    <input
+      type="text"
+      name="full_name"
+      id="full-name"
+      placeholder="John Wick"
+      required
+    >
+  </div>
+
+  <div>
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="john_wick"
+      minlength="3"
+      maxlength="30"
+      required
+    >
+  </div>
+
+  <div>
+    <label for="email"> Email address</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="john.wick@example.com"
+      required
+    >
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      required
+    >
+  </div>
+
+  <div>
+    <input
+      type="radio"
+      id="male"
+      name="gender"
+      value="male"
+      required
+    >
+    <label for="male">Male</label>
+    <br>
+    <input
+      type="radio"
+      id="female"
+      name="gender"
+      value="female"
+      required
+    >
+    <label for="female">Female</label>
+  </div>
+
+  <div>
+    <label for="accept-rules">I accept rules and conditions</label>
+    <input
+      type="checkbox"
+      id="accept-rules"
+      name="rules"
+      required
+    >
+    <div></div>
+    <label for="accept-newsletter">Subscribe to newsletters</label>
+    <input
+    type="checkbox"
+    id="accept-newsletter"
+    name="newsletter"
+    >
+  </div>
+
+  <div>
+    <label for="city">Your city</label>
+    <select name="city" id="city" required>
+      <option value="rostov">Rostov</option>
+      <option value="moscow">Moscow</option>
+      <option value="krasnodar">Krasnodar</option>
+      <option value="sochi">Sochi</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="address">Address:</label>
+    <div></div>
+    <textarea
+      name="address"
+      id="address"
+      cols="35"
+      rows="3"
+      placeholder="Ul. Pushkina, dom 1"
+      required
+    ></textarea>
+  </div>
+
+  <div>
+    <label for="birthday">Birth day</label>
+    <input
+      type="date"
+      name="birthday"
+      id="birthday"
+      required
+    >
+  </div>  
+  
+  <input type="submit" value="Register">
+
+</form>
+</body>
+</html>
