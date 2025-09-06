@@ -65,7 +65,7 @@
     <h2>My resources:</h2>
     <ul>
       <li><a href="https://vk.com/yarosik_berezik">VK</a></li>
-      <li><a href="#">Telegram</a></li>
+      <li><a href="https://web.telegram.org/k/">Telegram</a></li>
     </ul>
   </div>
 </main>
@@ -74,5 +74,14 @@
   &copy; Yaros, 2025
 </footer>
 
+
+<script>
+  const quotes = Array.from(document.querySelectorAll('.quote'));
+  let count = 0;
+  quotes.forEach((quote) => {
+      count += 1;
+      quote.innerText = count + '. ' + quote.innerText
+  })
+</script>
 </body>
 </html>
