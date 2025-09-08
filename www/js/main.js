@@ -18,7 +18,7 @@ function charsCount(input) {
 
 
 function checkPwd(event) {
-    event.preventDefault();
+    event.preventDefault(); // убирает перезагрузку страницы после отправки формы
     const pwd = document.getElementById("pwd").value;
     if (pwd === "1234") {
         document.getElementById("hidden_p").textContent = "пароль верный";
