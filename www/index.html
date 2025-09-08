@@ -6,8 +6,29 @@
   <title>JavaScript</title>
 </head>
 <body>
-  <noscript>Включите JavaScript</noscript>
 
-  <script src="js/main.js"></script>
+<button name="MainButton" onclick="onClickButton(this)">Press</button>
+
+<input type="text" oninput="charsCount(this)">
+<p id="input_p">Количество символов:</p>
+
+<form onsubmit="checkPwd(event)">
+  <input type="password" id="pwd">
+  <input type="submit" value="submit">
+  <p id="hidden_p"></p>
+</form>
+
+<img
+  src="https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1"
+  alt="some img"
+  id="hide_img"
+  style="display: block"
+>
+
+<button onclick="hideImg(this)">Hide</button>
+
+
+<noscript>Включите JavaScript</noscript>
+<script src="js/main.js"></script>
 </body>
 </html>
