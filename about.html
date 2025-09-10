@@ -23,12 +23,16 @@
     <h2>My lists</h2>
     <div>
       <h3>My favourite frameworks:</h3>
-      <ul>
-        <li>SQLAlchemy</li>
-        <li>FastAPI</li>
-        <li>NumPy</li>
+      <ul class="tasks">
+        <li class="task">SQLAlchemy</li>
+        <li class="task">FastAPI</li>
+        <li class="task">NumPy</li>
       </ul>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="lorem">Lorem ipsum dolor.</p>
+      <p class="lorem">Lorem ipsum dolor sit amet.</p>
+      <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, vitae!</p>
+      <p class="lorem">Lorem ipsum</p>
     </div>
 
     <div>
@@ -63,9 +67,10 @@
 
   <div>
     <h2>My resources:</h2>
-    <ul>
-      <li><a href="https://vk.com/yarosik_berezik">VK</a></li>
-      <li><a href="https://web.telegram.org/k/">Telegram</a></li>
+    <ul class="links">
+      <li class="link"><a href="https://vk.com/yarosik_berezik">VK</a></li>
+      <li class="link"><a href="https://web.telegram.org/k/">Telegram</a></li>
+      <li class="link"><a href="http://www.example.com">Example</a></li>
     </ul>
   </div>
 </main>
@@ -74,14 +79,6 @@
   &copy; Yaros, 2025
 </footer>
 
-
-<script>
-  const quotes = Array.from(document.querySelectorAll('.quote'));
-  let count = 0;
-  quotes.forEach((quote) => {
-      count += 1;
-      quote.innerText = count + '. ' + quote.innerText
-  })
-</script>
+<script src="about.js"></script>
 </body>
 </html>
