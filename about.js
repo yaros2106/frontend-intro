@@ -29,13 +29,17 @@ let year = new Date().getFullYear();
 document.getElementById("year").textContent = year.toString();
 
 
-let clicks_count = 0;
+const clickButton = document.getElementById("click_button");
+clickButton.addEventListener("click", getCountsClicks);
+let clicksCount = 0;
 function getCountsClicks() {
-    clicks_count += 1;
-    document.getElementById("clicks_count").innerText = clicks_count.toString();
+    clicksCount += 1;
+    document.getElementById("clicks_count").innerText = clicksCount.toString();
 }
 
+const resetButton = document.getElementById("reset_button");
+resetButton.addEventListener("click", resetClicks)
 function resetClicks() {
-    clicks_count = 0;
-    document.getElementById("clicks_count").innerText = "0";
+    clicksCount = 0;
+    document.getElementById("clicks_count").innerText = clicksCount.toString();
 }
