@@ -27,3 +27,15 @@ links.forEach((link) => {
 
 let year = new Date().getFullYear();
 document.getElementById("year").textContent = year.toString();
+
+
+let clicks_count = 0;
+function getCountsClicks() {
+    clicks_count += 1;
+    document.getElementById("clicks_count").innerText = clicks_count.toString();
+}
+
+function resetClicks() {
+    clicks_count = 0;
+    document.getElementById("clicks_count").innerText = "0";
+}
