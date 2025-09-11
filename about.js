@@ -21,6 +21,9 @@ for (let i = 0; i < text.length; i++) {
 const links = Array.from(document.querySelectorAll(".link a"))
 links.forEach((link) => {
     if (link.href.startsWith("https")) {
-        link.innerText = link.innerText + " (external)"
+        link.innerText = link.innerText + " (external)";
     }
 })
+
+let year = new Date().getFullYear();
+document.getElementById("year").textContent = year.toString();
