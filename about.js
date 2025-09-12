@@ -13,9 +13,9 @@ tasks.forEach((task) => {
 })
 
 const text = Array.from(document.querySelectorAll(".lorem"));
-const colors = ["yellow", "green", "blue"];
+const colors = ["purple", "green", "blue"];
 for (let i = 0; i < text.length; i++) {
-    text[i].style.backgroundColor = colors[i % 3];
+    text[i].style.color = colors[i % 3];
 }
 
 const links = Array.from(document.querySelectorAll(".link a"))
