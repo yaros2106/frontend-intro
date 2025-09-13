@@ -3,6 +3,9 @@ body {
   color: #eae4dd;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+}
+
+.main.container-fluid {
   padding: 20px;
 }
 
