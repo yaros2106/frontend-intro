@@ -71,11 +71,17 @@
         <h3>My favourite frameworks:</h3>
         <input
           id="searched-favourite-framework"
-          class="form-control my-2"
+          class="form-control my-2 d-none"
           type="search"
           placeholder="Search for frameworks..."
           aria-label="Search for frameworks"
         >
+
+        <noscript>
+          <div class="alert alert-warning" role="alert">
+            JavaScript is required!
+          </div>
+        </noscript>
 
         <ul class="tasks list-group" id="favourite-frameworks-list">
           <li
@@ -107,7 +113,8 @@
             data-bs-placement="top"
             data-bs-content="General purpose language"
 
-          >Python</li>
+          >Python
+          </li>
           <li class="list-group-item">JavaScript</li>
           <li class="list-group-item">C++</li>
         </ol>
@@ -252,23 +259,26 @@
   </script>
 
   <script>
-    const searchInput = document.getElementById("searched-favourite-framework");
-    const frameworksList = document.getElementById("favourite-frameworks-list");
+      const searchInput = document.getElementById("searched-favourite-framework");
+      const frameworksList = document.getElementById("favourite-frameworks-list");
 
-    function handleSearch() {
-        console.log('New search:', [searchInput.value]);
-        const searchValue = searchInput.value.trim().toLowerCase();
-        const items = Array.from(frameworksList.getElementsByTagName('li'));
-        items.forEach((item) => {
-            if (item.textContent.toLowerCase().includes(searchValue)) {
-             item.classList.remove('d-none');
-            } else {
-                item.classList.add('d-none');
-            }
-        })
-    }
-    searchInput.addEventListener('keyup', handleSearch);
-    searchInput.addEventListener('search', handleSearch);
+      searchInput.classList.remove('d-none');
+
+      function handleSearch() {
+          console.log('New search:', [searchInput.value]);
+          const searchValue = searchInput.value.trim().toLowerCase();
+          const items = Array.from(frameworksList.getElementsByTagName('li'));
+          items.forEach((item) => {
+              if (item.textContent.toLowerCase().includes(searchValue)) {
+                  item.classList.remove('d-none');
+              } else {
+                  item.classList.add('d-none');
+              }
+          })
+      }
+
+      searchInput.addEventListener('keyup', handleSearch);
+      searchInput.addEventListener('search', handleSearch);
 
   </script>
 
