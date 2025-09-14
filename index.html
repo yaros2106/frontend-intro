@@ -69,7 +69,15 @@
       <h2>My lists</h2>
       <div>
         <h3>My favourite frameworks:</h3>
-        <ul class="tasks list-group">
+        <input
+          id="searched-favourite-framework"
+          class="form-control my-2"
+          type="search"
+          placeholder="Search for frameworks..."
+          aria-label="Search for frameworks"
+        >
+
+        <ul class="tasks list-group" id="favourite-frameworks-list">
           <li
             class="task list-group-item"
             data-bs-toggle="tooltip"
@@ -241,6 +249,27 @@
 
       const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
       const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+  </script>
+
+  <script>
+    const searchInput = document.getElementById("searched-favourite-framework");
+    const frameworksList = document.getElementById("favourite-frameworks-list");
+
+    function handleSearch() {
+        console.log('New search:', [searchInput.value]);
+        const searchValue = searchInput.value.trim().toLowerCase();
+        const items = Array.from(frameworksList.getElementsByTagName('li'));
+        items.forEach((item) => {
+            if (item.textContent.toLowerCase().includes(searchValue)) {
+             item.classList.remove('d-none');
+            } else {
+                item.classList.add('d-none');
+            }
+        })
+    }
+    searchInput.addEventListener('keyup', handleSearch);
+    searchInput.addEventListener('search', handleSearch);
+
   </script>
 
 </div>
